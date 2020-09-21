@@ -1,0 +1,15 @@
+//Bootstrap
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+//Global
+
+$primary: rgba(78, 185, 19, 1);
+$secondary: rgba(10, 28, 0, 1);
+$black: rgba(0, 0, 0, 1);
+$white: rgba(255, 255, 255, 1);
+
+
+body {
+    background-color: $white;
+}

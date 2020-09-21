@@ -1,0 +1,23 @@
+{
+  "name": "cbeambr",
+  "version": "1.0.0",
+  "description": "A primeira Code BEAM Brasil vai reunir os principais nomes da comunidade Elixirlang e Erlang em um evento 100% online e pela primeira vez com palestras em português.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch ./style/app.scss ./style/app.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitorpinho376/cbeambr.git"
+  },
+  "author": "Stone Web",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitorpinho376/cbeambr/issues"
+  },
+  "homepage": "https://github.com/vitorpinho376/cbeambr#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  }
+}
