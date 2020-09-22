@@ -11,6 +11,16 @@ $white: rgba(255, 255, 255, 1);
 $primary-gradient: linear-gradient(90deg,#ff004e,#252dd8);
 $secondary-gradient: linear-gradient(to right, rgba(78, 185, 19, 1) , rgba(21, 230, 255, 1));
 
+#iframe-inscricao { 
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 0px 14px 8px rgba(0, 0, 0, 0.03);
+    padding: 40px; 
+    border-radius: 24px; 
+    width: 100%;
+    min-height: 820px;
+    display: block;
+    overflow: visible !important;
+}
 
 body {
     background-color: $black;
@@ -80,16 +90,34 @@ a {
     }
 }
 
+.main-link {
+    color: $white;
+    font-size: 1.5rem;
+}
+
 .neutral-link {
     color: $white;
+}
+
+.keynote-link {
+    color: $white;
+    text-decoration: underline;
+}
+
+.frame-link {
+    color: $primary;
 }
 
 
 //Structure
 
 header {
+    transition: .3s ease-in-out all;
     background-color: $black;
     padding: 8px 8%;
+    width: 100%;
+    display: block;
+    z-index: 9;
 
     & .main-nav {
         vertical-align: middle;
@@ -102,6 +130,13 @@ header {
             padding: 8px;
             color: $white;
         }
+    }
+
+    &.scrolled {
+        padding: 16px 8%;
+        position: fixed;
+        background-color: $primary;
+        box-shadow: 0px 14px 8px rgba(0, 0, 0, 0.03);
     }
 }
 
@@ -124,7 +159,6 @@ header {
 
 .main-hero { 
     min-height: 100vh;
-    background: linear-gradient(to right, rgba(78, 185, 19, .6) , rgba(21, 230, 255, .6));
     position: relative;
     
     
@@ -149,7 +183,6 @@ header {
     bottom: 0;
     left: 0;
     z-index: -1;
-    opacity: .5;
     background: url(../img/bg01.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -168,8 +201,169 @@ header {
         display: block;
     }
 
+    & .event-more-info .display {
+        margin-top: 24px;
+    }
+
     & img {
         width: 80%;
-        margin: 0 auto;
+        margin: 0 auto 40px;
+    }
+}
+
+.event-theme {
+    position: relative;
+    background-color: rgba(0,0,0,.5);
+    padding: 56px 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: url(../img/bg01.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        }
+
+        & .xheading {
+            margin-bottom: 32px;
+        }
+
+        & .themes-holder {
+            display: flex;
+            flex-flow: row wrap;
+
+            & .topic {
+                width: 200px;
+                max-width: 33%;
+                padding: 32px 0;
+            }
+        }
+}
+
+.section-notes {
+    padding: 64px 0;
+
+      & .row {
+          margin: 40px 0 0;
+      }
+
+        & .keynote {
+            width: 100%;
+            
+
+            & .avatar {
+                position: relative;
+                width: 300px;
+                height: 300px;
+                display: flex;
+                overflow: hidden;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 24px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: $secondary-gradient;
+                    opacity: .5;
+                    }
+
+                & img {
+                    width: 100%;
+                }
+            }
+
+            & h4 {
+                font-size: 32px;
+            }
+        }
+           
+        }
+    
+.lecture {
+    position: relative;
+    padding: 48px 0;
+    background: linear-gradient(90deg, rgba(255, 0, 78, .6), rgba(37, 45, 216, .6));
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: url(../img/bg02.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        }
+
+        & img {
+            width: 80%;
+        }
+
+        & h3, & h4 {
+            margin-bottom: 32px;
+        }
+
+        & .action-holder {
+            padding: 24px 0;
+        }
+}
+
+.tickets {
+    padding: 48px 0;
+    position: relative;
+    background: #FFF url(../img/bg03.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.investment {
+    padding: 88px 0;
+    background: $secondary-gradient;
+
+    & .heading {
+        margin-bottom: 32px;
+    }
+}
+
+footer {
+    padding: 56px 0;
+    font-size: 2rem;
+
+    & .main-link {
+        word-wrap: break-word;
+        font-size: 1.5rem;
+    }
+
+    & .brand-holder {
+        text-align: left;
+        padding: 64px 0;
+        text-align: left;
+
+        & img {
+            margin: 16px 0;
+            width: 90%;
+        }
+
+        & img:first-child {
+            width: 70%;
+        }
     }
 }
