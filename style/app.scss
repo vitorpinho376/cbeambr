@@ -285,10 +285,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
 
-    & .logo-holder {
-        width: 200px;
-        display: flex;
-    }
     & .main-nav {
         display: flex;
         align-items: stretch;
