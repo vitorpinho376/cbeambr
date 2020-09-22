@@ -10174,6 +10174,7 @@ header.scrolled {
 
 .tickets {
   padding: 120px 0;
+  min-height: 100vh;
   position: relative;
   background: #FFF url(../img/bg03.png) no-repeat center center fixed;
   -webkit-background-size: cover;

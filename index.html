@@ -329,8 +329,7 @@
             event.preventDefault();
             let target = document.querySelector(event.target.hash);
             target.scrollIntoView({
-              behavior: "smooth",
-              block: "start"
+              behavior: "smooth"
             });
           });
         });
@@ -341,14 +340,14 @@
         let cur = [];
 
         window.addEventListener("scroll", event => {
-          let fromTop = window.scrollY;
+          let fromTop = window.scrollY + 40;
 
           mainNavLinks.forEach(link => {
             let section = document.querySelector(link.hash);
 
             if (
               section.offsetTop <= fromTop &&
-              section.offsetTop + section.offsetHeight > fromTop + 80
+              section.offsetTop + section.offsetHeight > fromTop
             ) {
               link.classList.add("current");
             } else {
