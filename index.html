@@ -11,9 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/app.css">
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="js/app.js" type="text/javascript"></script>
     <!-- iFrame Script -->
 
     <script src="https://credencial.imasters.com.br/js/box_inscricao.js" type="text/javascript"></script>
@@ -27,11 +24,11 @@
     <header class="main-header">
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm">
             <a href="#" class="logo"><img src="img/code-sync-logo.svg" /> Code Sync</a>
           </div>
-          <div class="col-md-8">
-            <nav class="main-nav">
+          <div class="col-md-8 col-sm">
+            <nav class="main-nav desktop">
               <a href="#themes" class="neutral-link">Temas</a>
               <a href="#keynotes" class="neutral-link">Keynotes</a>
               <a href="#lecture" class="neutral-link">Palestras</a>
@@ -124,8 +121,9 @@
                   </div>
                   <div class="keynote-info">
                     <h4>José Valim</h4>
-                    <a class="keynote-link" href="https://codesync.global/speaker/jose-valim/" target="_blank">Creator of Elixir & Chief Adoption Officer @ Dashbit</a>
+                    <p class="keynote-about thin">Creator of Elixir & Chief Adoption Officer @ Dashbit</a>
                     <p class="keynote-about">Novidades do Elixir v1</p>
+                    <a class="keynote-link" href="https://codesync.global/speaker/jose-valim/" target="_blank">+ Mais</a>
                   </div>
                 </div>
 
@@ -141,8 +139,9 @@
                 </div>
                 <div class="keynote-info">
                   <h4>Mariano Guerra</h4>
-                  <a class="keynote-link" href="https://codesync.global/speaker/mariano-guerra/" target="_blank">Co-founder @ Instadeq</a>
+                  <p class="keynote-about thin">Co-founder @ Instadeq</p>
                   <p class="keynote-about">BEAM Language Ecosystem: Past, Present and Future</p>
+                  <a class="keynote-link" href="https://codesync.global/speaker/mariano-guerra/" target="_blank">+ Mais</a>
                 </div>
               </div>
 
@@ -160,7 +159,7 @@
                   <h4>Robert Virding</h4>
                   <p class="keynote-about thin">Co-creator of Erlang</p>
                   <p class="keynote-about">BEAM Language Ecosystem: Past, Present and Future</p>
-                  <a class="keynote-link" href="https://codesync.global/speaker/robert-virding/" target="_blank">Saiba Mais</a>
+                  <a class="keynote-link" href="https://codesync.global/speaker/robert-virding/" target="_blank">+ Mais</a>
                 </div>
               </div>
 
@@ -182,7 +181,7 @@
                   <h4>Charlotte Lorelei</h4>
                   <p class="keynote-about thin">NET IDOL</p>
                   <p class="keynote-about">TBP</p>
-                  <a class="keynote-link" href="https://codesync.global/speaker/charlotte-lorelei-de-oliveira100/" target="_blank">Saiba Mais</a>
+                  <a class="keynote-link" href="https://codesync.global/speaker/charlotte-lorelei-de-oliveira100/" target="_blank">+ Mais</a>
                 </div>
               </div>
   
@@ -200,7 +199,7 @@
                       <h4>Ingela Andin</h4>
                       <p class="keynote-about thin">Top female contributor to Erlang/OTP & Developer @ OTP Team</p>
                       <p class="keynote-about">Do not break windows - or why your test code is important</p>
-                      <a class="keynote-link" href="https://codesync.global/speaker/robert-virding/" target="_blank">Saiba Mais</a>
+                      <a class="keynote-link" href="https://codesync.global/speaker/robert-virding/" target="_blank">+ Mais</a>
                     </div>
                   </div>
 
@@ -275,27 +274,28 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-md-4">
-            <h5>Realização</h5>
+          <div class="col-md-3">
+            <h5 class="display thin up">Realização</h5>
             <div class="brand-holder">
               <img src="img/code-sync-brand.png" />
               <img src="img/stone.png" />
             </div>
           </div>
 
-          <div class="col-md-4">
-            <h5>Mídia</h5>
+          <div class="col-md-5">
+            <h5 class="display thin up">Mídia</h5>
             <nav class="social-nav">
-              <a href="#" class="social-link"></a>
-              <a href="#" class="social-link"></a>
-              <a href="#" class="social-link"></a>
-              <a href="#" class="social-link"></a>
-              <a href="#" class="social-link"></a>
+              <a target="_blank" href="https://twitter.com/CodeBEAMBR" class="social-link"><i class="icon icon-twitter"></i></a>
+              <a target="_blank" href="https://twitter.com/CodeBEAMio" class="social-link alt"><i class="icon icon-twitter"></i></a>
+              <a target="_blank" href="https://www.youtube.com/c/codesync" class="social-link"><i class="icon icon-youtube"></i></a>
+              <a target="_blank" href="https://www.facebook.com/groups/CodeSyncIO/" class="social-link"><i class="icon icon-facebook"></i></a>
+              <a target="_blank" href="https://www.instagram.com/codesyncglobal/" class="social-link"><i class="icon icon-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/code-sync/" class="social-link"><i class="icon icon-linkedin2"></i></a>
             </nav>
           </div>
 
           <div class="col-md-4">
-            <h5>Contato</h5>
+            <h5 class="display thin up">Contato</h5>
             <a href="mailto:contato@codebeambr.com" class="main-link">contato@codebeambr.com</a>
           </div>
 
@@ -303,9 +303,9 @@
       </div>
     </footer>
 
-
     <!-- Optional JavaScript -->
-    
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script>

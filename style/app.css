@@ -9893,8 +9893,109 @@ h3 {
     border-color: #dee2e6;
   }
 }
+@font-face {
+  font-family: "codebeambr";
+  src: url("../icons/codebeambr.eot?x3xsmq");
+  src: url("../icons/codebeambr.eot?x3xsmq#iefix") format("embedded-opentype"), url("../icons/codebeambr.ttf?x3xsmq") format("truetype"), url("../icons/codebeambr.woff?x3xsmq") format("woff"), url("../icons/codebeambr.svg?x3xsmq#codebeambr") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "codebeambr" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "";
+}
+
+.icon-play:before {
+  content: "";
+}
+
+.icon-warning:before {
+  content: "";
+}
+
+.icon-cross:before {
+  content: "";
+}
+
+.icon-checkmark:before {
+  content: "";
+}
+
+.icon-arrow-up2:before {
+  content: "";
+}
+
+.icon-arrow-right2:before {
+  content: "";
+}
+
+.icon-arrow-down2:before {
+  content: "";
+}
+
+.icon-arrow-left2:before {
+  content: "";
+}
+
+.icon-checkbox-checked:before {
+  content: "";
+}
+
+.icon-checkbox-unchecked:before {
+  content: "";
+}
+
+.icon-radio-checked:before {
+  content: "";
+}
+
+.icon-radio-checked2:before {
+  content: "";
+}
+
+.icon-radio-unchecked:before {
+  content: "";
+}
+
+.icon-facebook:before {
+  content: "";
+}
+
+.icon-instagram:before {
+  content: "";
+}
+
+.icon-twitter:before {
+  content: "";
+}
+
+.icon-youtube:before {
+  content: "";
+}
+
+.icon-linkedin2:before {
+  content: "";
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+.mob {
+  display: none;
 }
 
 #iframe-inscricao {
@@ -9967,6 +10068,14 @@ a {
 .btn.neutral-btn {
   color: black;
   background-color: white;
+  vertical-align: middle;
+}
+.btn.neutral-btn .icon {
+  font-size: 1.5rem;
+  vertical-align: middle;
+  line-height: 24px;
+  position: relative;
+  top: -2px;
 }
 .btn.neutral-btn:hover {
   background-color: #4eb913;
@@ -9996,7 +10105,30 @@ a {
   text-decoration: none;
 }
 
+.menu-link {
+  color: white;
+  font-size: 1.5rem;
+}
+.menu-link:hover {
+  color: white;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.social-nav .social-link {
+  color: #4eb913;
+  margin-right: 16px;
+}
+.social-nav .social-link:hover {
+  color: white;
+  text-decoration: none;
+}
+.social-nav .social-link.alt {
+  color: #ff004e;
+}
+
 .keynote-link {
+  font-size: 1.125rem;
   color: white;
   text-decoration: underline;
 }
@@ -10229,17 +10361,32 @@ footer .main-link {
   word-wrap: break-word;
   font-size: 1.5rem;
 }
+footer .display {
+  margin-bottom: 32px;
+}
 footer .brand-holder {
-  text-align: left;
-  padding: 64px 0;
   text-align: left;
 }
 footer .brand-holder img {
   margin: 16px 0;
-  width: 90%;
+  height: 120px;
 }
 footer .brand-holder img:first-child {
-  width: 70%;
+  height: 100px;
+}
+
+@media (max-width: 700px) {
+  header {
+    padding: 0;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mob {
+    display: initial;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

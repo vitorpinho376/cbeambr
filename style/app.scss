@@ -2,6 +2,93 @@
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+//Icons
+
+@font-face {
+    font-family: 'codebeambr';
+    src:  url('../icons/codebeambr.eot?x3xsmq');
+    src:  url('../icons/codebeambr.eot?x3xsmq#iefix') format('embedded-opentype'),
+      url('../icons/codebeambr.ttf?x3xsmq') format('truetype'),
+      url('../icons/codebeambr.woff?x3xsmq') format('woff'),
+      url('../icons/codebeambr.svg?x3xsmq#codebeambr') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'codebeambr' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e900";
+  }
+  .icon-play:before {
+    content: "\e901";
+  }
+  .icon-warning:before {
+    content: "\ea07";
+  }
+  .icon-cross:before {
+    content: "\ea0f";
+  }
+  .icon-checkmark:before {
+    content: "\ea10";
+  }
+  .icon-arrow-up2:before {
+    content: "\ea3a";
+  }
+  .icon-arrow-right2:before {
+    content: "\ea3c";
+  }
+  .icon-arrow-down2:before {
+    content: "\ea3e";
+  }
+  .icon-arrow-left2:before {
+    content: "\ea40";
+  }
+  .icon-checkbox-checked:before {
+    content: "\ea52";
+  }
+  .icon-checkbox-unchecked:before {
+    content: "\ea53";
+  }
+  .icon-radio-checked:before {
+    content: "\ea54";
+  }
+  .icon-radio-checked2:before {
+    content: "\ea55";
+  }
+  .icon-radio-unchecked:before {
+    content: "\ea56";
+  }
+  .icon-facebook:before {
+    content: "\ea90";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-youtube:before {
+    content: "\ea9d";
+  }
+  .icon-linkedin2:before {
+    content: "\eaca";
+  }
+  
+
 //Global
 
 $primary: rgba(78, 185, 19, 1);
@@ -13,6 +100,10 @@ $secondary-gradient: linear-gradient(to right, rgba(78, 185, 19, 1) , rgba(21, 2
 
 html {
     scroll-behavior: smooth;
+}
+
+.mob {
+    display: none;
 }
 
 #iframe-inscricao { 
@@ -91,6 +182,15 @@ a {
     &.neutral-btn {
         color: $black;
         background-color: $white;
+        vertical-align: middle;
+
+        & .icon {
+            font-size: 1.5rem;
+            vertical-align: middle;
+            line-height: 24px;
+            position: relative;
+            top: -2px;
+        }
 
         &:hover {
             background-color: $primary;
@@ -124,7 +224,36 @@ a {
     }
 }
 
+.menu-link {
+    color: $white;
+    font-size: 1.5rem;
+    &:hover {
+        color: $white;
+        opacity: .8;
+        text-decoration: none;
+    }
+}
+
+.social-nav {
+
+    & .social-link {
+        color: $primary;
+        margin-right: 16px;
+    
+        &:hover {
+            color: rgba(255,255,255,1);
+            text-decoration: none;
+        }
+    
+        &.alt {
+            color: #ff004e;
+        }
+    }
+}
+
+
 .keynote-link {
+    font-size: 1.125rem;
     color: $white;
     text-decoration: underline;
     &:hover {
@@ -394,18 +523,33 @@ footer {
         font-size: 1.5rem;
     }
 
+    & .display {
+        margin-bottom: 32px;
+    }
+
     & .brand-holder {
-        text-align: left;
-        padding: 64px 0;
         text-align: left;
 
         & img {
             margin: 16px 0;
-            width: 90%;
+            height: 120px;
         }
 
         & img:first-child {
-            width: 70%;
+            height: 100px;
         }
     }
+}
+
+
+@media (max-width: 700px) {
+  header {
+    padding: 0;
+  }  
+  .desktop {
+      display: none;
+  }
+  .mob {
+      display: initial;
+  }
 }
