@@ -9894,7 +9894,143 @@ h3 {
   }
 }
 body {
+  background-color: black;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+}
+
+a {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.up {
+  text-transform: uppercase;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+.xheading {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+.heading {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.display {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.body, p {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.microcopy {
+  font-size: 0.875;
+  line-height: 1.125rem;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  padding: 16px 32px;
+  font-weight: 600;
+  border-radius: 0;
+}
+.btn.neutral-btn {
+  color: black;
   background-color: white;
+}
+.btn.primary-btn {
+  color: white;
+  background-color: #4eb913;
+}
+
+.neutral-link {
+  color: white;
+}
+
+header {
+  background-color: black;
+  padding: 8px 8%;
+}
+header .main-nav {
+  vertical-align: middle;
+  text-align: right;
+}
+header .main-nav .neutral-link {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  margin-right: 16px;
+  padding: 8px;
+  color: white;
+}
+
+.logo {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-size: 1.25rem;
+  word-spacing: 4px;
+  vertical-align: middle;
+  line-height: 40px;
+}
+.logo img {
+  height: 40px;
+  position: relative;
+  top: -2px;
+}
+
+.main-hero {
+  min-height: 100vh;
+  background: linear-gradient(to right, rgba(78, 185, 19, 0.6), rgba(21, 230, 255, 0.6));
+  position: relative;
+}
+.main-hero .action-holder {
+  padding: 24px 0;
+}
+.main-hero .action-holder .btn {
+  width: 100%;
+  max-width: 300px;
+}
+.main-hero .row {
+  min-height: 100vh;
+}
+.main-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+  background: url(../img/bg01.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.main-section p {
+  margin: 24px 0;
+}
+
+.event-info .event-more-info span {
+  display: block;
+}
+.event-info img {
+  width: 80%;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=app.css.map */
