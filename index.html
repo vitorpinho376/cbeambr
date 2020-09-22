@@ -32,11 +32,11 @@
           </div>
           <div class="col-md-8">
             <nav class="main-nav">
-              <a href="#" class="neutral-link">Temas</a>
-              <a href="#" class="neutral-link">Keynotes</a>
-              <a href="#" class="neutral-link">Palestras</a>
-              <a href="#" class="neutral-link">Tickets</a>
-              <a href="#" class="neutral-link">Patrocínio</a>
+              <a href="#themes" class="neutral-link">Temas</a>
+              <a href="#keynotes" class="neutral-link">Keynotes</a>
+              <a href="#lecture" class="neutral-link">Palestras</a>
+              <a href="#tickets" class="neutral-link">Tickets</a>
+              <a href="#investment" class="neutral-link">Patrocínio</a>
             </nav>
           </div>
         </div>
@@ -80,7 +80,7 @@
 
     <!--  Event Themes -->
 
-    <section class="event-theme">
+    <section id="themes" class="event-theme">
        <div class="container">
          <div class="row">
            <div class="col-md-12">
@@ -102,7 +102,7 @@
 
     <!--  Key Notes -->
 
-    <section class="section-notes">
+    <section id="keynotes" class="section-notes">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -212,7 +212,7 @@
 
      <!-- Lecture -->
 
-     <section class="lecture">
+     <section id="lecture" class="lecture">
        <div class="container">
          <div class="row">
            <div class="col-md-12">
@@ -237,7 +237,7 @@
 
      <!-- Tickets -->
 
-     <section class="tickets">
+     <section id="tickets" class="tickets">
 
       <!-- iFrame Section -->
       <div class="container">
@@ -253,7 +253,7 @@
 
     <!-- Patrocínio -->
     
-    <section class="investment">
+    <section id="investment" class="investment">
        <div class="container">
          <div class="row">
            <div class="col-md-12">
@@ -321,6 +321,42 @@
         }
       }
       headerLocation();
+
+      let mainNavLinks = document.querySelectorAll("nav a");
+
+        mainNavLinks.forEach(link => {
+          link.addEventListener("click", event => {
+            event.preventDefault();
+            let target = document.querySelector(event.target.hash);
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+          });
+        });
+
+        let mainSections = document.querySelectorAll("section");
+
+        let lastId;
+        let cur = [];
+
+        window.addEventListener("scroll", event => {
+          let fromTop = window.scrollY;
+
+          mainNavLinks.forEach(link => {
+            let section = document.querySelector(link.hash);
+
+            if (
+              section.offsetTop <= fromTop &&
+              section.offsetTop + section.offsetHeight > fromTop + 80
+            ) {
+              link.classList.add("current");
+            } else {
+              link.classList.remove("current");
+            }
+          });
+        });
+        
     </script>
   </body>
 </html>
