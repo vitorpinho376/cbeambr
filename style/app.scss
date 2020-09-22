@@ -562,9 +562,7 @@ footer {
 
 $breakpoint-tablet: 768px;
 @media (max-width: $breakpoint-tablet) {
-    header {
-        flex-direction: column;
-    }
+    
   .desktop {
       display: none !important;
   }
