@@ -10395,10 +10395,6 @@ footer .brand-holder img:first-child {
 }
 
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-
   .desktop {
     display: none !important;
   }
