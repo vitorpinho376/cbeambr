@@ -9918,6 +9918,7 @@ body {
 a {
   font-weight: 600;
   letter-spacing: 1px;
+  transition: all 0.5s ease-in-out;
 }
 
 .up {
@@ -9960,53 +9961,78 @@ a {
   font-weight: 600;
   border-radius: 0;
 }
+.btn:active, .btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
 .btn.neutral-btn {
   color: black;
   background-color: white;
 }
+.btn.neutral-btn:hover {
+  background-color: #4eb913;
+  color: white;
+}
 .btn.primary-btn {
   color: white;
   background-color: #4eb913;
+}
+.btn.primary-btn:hover {
+  background: rgba(78, 185, 19, 0.8);
 }
 
 .main-link {
   color: white;
   font-size: 1.5rem;
 }
+.main-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
 
 .neutral-link {
   color: white;
+}
+.neutral-link:hover {
+  opacity: 0.4;
+  text-decoration: none;
 }
 
 .keynote-link {
   color: white;
   text-decoration: underline;
 }
+.keynote-link:hover {
+  color: #4eb913;
+}
 
 .frame-link {
   color: #4eb913;
+}
+.frame-link:hover {
+  color: #0a1c00;
 }
 
 header {
   transition: 0.3s ease-in-out all;
   background-color: black;
-  padding: 8px 8%;
+  padding: 0 8%;
   width: 100%;
   z-index: 9;
+  line-height: 56px;
 }
 header .main-nav {
-  vertical-align: middle;
   text-align: right;
 }
 header .main-nav .neutral-link {
   text-transform: uppercase;
   font-size: 1.125rem;
   margin-right: 16px;
-  padding: 8px;
+  padding: 12px 8px;
   color: white;
+  border-bottom: 4px solid transparent;
 }
 header .main-nav .current {
-  color: #000;
+  color: white;
+  border-bottom: 4px solid white;
 }
 header.scrolled {
   top: 0;
@@ -10024,6 +10050,10 @@ header.scrolled {
   word-spacing: 4px;
   vertical-align: middle;
   line-height: 40px;
+}
+.logo:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
 }
 .logo img {
   height: 40px;
